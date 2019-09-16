@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/JiangJuncai/FM_SERVER#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.18.4"
   },
   "devDependencies": {
     "cross-env": "^5.2.1"

@@ -1,23 +1,11 @@
 const dev = {
     HOSTPORT: 3000,
-    MYSQL: {
-        host: 'localhost',
-        user: 'root',
-        password: '111111',
-        database: 'fundManage',
-        port: 3306
-    }
+    MYSQL_URI: 'mysql://root:111111@localhost:3306/fundManageDev'
 };
 
 const prod = {
     HOSTPORT: 4000,
-    MYSQL: {
-        host: 'localhost',
-        user: 'root',
-        password: '111111',
-        database: 'fund',
-        port: 3306
-    }
+    MYSQL_URI: 'mysql://root:111111@localhost:3306/fundManage'
 };
 
 module.exports = process.env.NODE_ENV === 'development' ? dev : prod;
