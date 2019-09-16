@@ -1,13 +1,13 @@
-const express = require('express')
-const config = require('./config')
+const express = require('express');
+const config = require('./config');
 
-process.env.NODE_ENV = 'development'
-const app = express()
+process.env.NODE_ENV = 'development';
+const app = express();
 
 app.get('/', (req, res) => {
-  res.json('success')
-})
+    res.json('success')
+});
 
 app.listen(config.HOSTPORT, () => {
-  console.log(`http://localhost:${config.HOSTPORT}`)
-})
+    console.log(`http://localhost:${config.HOSTPORT}`)
+});
