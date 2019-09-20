@@ -1,29 +1,30 @@
 {
-  "name": "fm_server",
-  "version": "1.0.0",
-  "description": "Fund Management Server",
-  "main": "index.js",
-  "scripts": {
-    "dev": "cross-env NODE_ENV='development' nodemon app.js",
-    "prod": "cross-env NODE_ENV='production' nodemon app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JiangJuncai/FM_SERVER.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JiangJuncai/FM_SERVER/issues"
-  },
-  "homepage": "https://github.com/JiangJuncai/FM_SERVER#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "mysql2": "^1.7.0",
-    "sequelize": "^5.18.4"
-  },
-  "devDependencies": {
-    "cross-env": "^5.2.1"
-  }
+    "name": "fm_server",
+    "version": "1.0.0",
+    "description": "Fund Management Server",
+    "main": "index.js",
+    "scripts": {
+        "dev": "cross-env NODE_ENV='development' nodemon app.js",
+        "prod": "cross-env NODE_ENV='production' nodemon app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JiangJuncai/FM_SERVER.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/JiangJuncai/FM_SERVER/issues"
+    },
+    "homepage": "https://github.com/JiangJuncai/FM_SERVER#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mysql2": "^1.7.0",
+        "sequelize": "^5.18.4"
+    },
+    "devDependencies": {
+        "cross-env": "^5.2.1",
+        "prettier": "^1.18.2"
+    }
 }
