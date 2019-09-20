@@ -21,7 +21,7 @@ Staff.init(
                 is: /^[a-zA-Z]\w{2,8}$/
             }
         },
-        enterDate: {
+        enter_date: {
             type: Sequelize.DATE,
             defaultValue: Sequelize.NOW,
             allowNull: false,

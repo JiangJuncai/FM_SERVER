@@ -4,6 +4,12 @@ const config = require('./config');
 process.env.NODE_ENV = 'development';
 const app = express();
 
+// use body-parser
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// test is it connected to mysql
 const sequelize = require('./models/db');
 sequelize
     .authenticate()
@@ -13,6 +19,8 @@ sequelize
     .catch(err => {
         console.error('Unable to connect to the database:', err);
     });
+
+require('./routes/index')(app);
 
 const Staff = require('./models/Staff');
 app.get('/create', async (req, res) => {
