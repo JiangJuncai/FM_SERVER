@@ -1,5 +1,5 @@
 const staff = require('./api/staff');
 
 module.exports = app => {
-    app.use('/staff', staff);
+    app.use('v0/staff', staff);
 };

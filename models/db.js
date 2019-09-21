@@ -5,16 +5,8 @@ const Sequelize = require('sequelize');
 const config = require('../config');
 
 const sequelize = new Sequelize(config.MYSQL_URI, {
-    pool: {
-        max: 10,
-        min: 0,
-        idle: 10000
-    },
-    define: {
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true
-    }
+    pool: config.SEQUELIZE_POOL,
+    define: config.SEQUELIZE_DEFINE
 });
 
 module.exports = sequelize;
