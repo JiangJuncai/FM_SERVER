@@ -17,6 +17,7 @@ router.post('/create', async (req, res) => {
     try {
         req.body.password = bcrypt.hashSync(req.body.password, BCRYPT_SALT_ROUNDS);
         const staff = await Staff.create(req.body);
+        delete staff.dataValues.password;
         res.json({
             code: 1,
             data: staff,
@@ -49,6 +50,7 @@ router.post('/create', async (req, res) => {
 router.get('/all', async (req, res) => {
     try {
         const staffs = await Staff.findAll({
+            attributes: { exclude: ['password'] },
             order: [['enter_date', 'DESC']]
         });
         res.json({
@@ -100,6 +102,7 @@ router.delete('/:id', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const staff = await Staff.findByPk(req.params.id);
+        delete staff.dataValues.password;
         res.json({
             code: 1,
             data: staff,
@@ -124,6 +127,7 @@ router.get('/:id', async (req, res) => {
 router.get('/', async (req, res) => {
     try {
         const staffs = await Staff.findAll({
+            attributes: { exclude: ['password'] },
             where: {
                 name: {
                     [Sequelize.Op.like]: `%${req.query.name}%`
@@ -159,6 +163,7 @@ router.put('/:id', async (req, res) => {
                 id: req.params.id
             }
         });
+        delete staff.dataValues.password;
         res.json({
             code: 1,
             data: staff,
