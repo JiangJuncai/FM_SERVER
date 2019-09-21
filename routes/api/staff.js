@@ -8,7 +8,7 @@ const router = express.Router();
 const BCRYPT_SALT_ROUNDS = config.BCRYPT_SALT_ROUNDS;
 
 /**
- * $route POST staff/create
+ * @route POST v0/staff/create
  * @desc create a staff
  * @return staff Object
  * @access public
@@ -42,7 +42,7 @@ router.post('/create', async (req, res) => {
 });
 
 /**
- * $route get staff/all
+ * @route get v0/staff/all
  * @desc find all staffs
  * @return staff Array
  * @access private
@@ -68,7 +68,7 @@ router.get('/all', async (req, res) => {
 });
 
 /**
- * $route delete staff/:id
+ * @route delete v0/staff/:id
  * @desc delete one staff by id
  * @params id {string}
  * @return successInfo Object
@@ -93,7 +93,7 @@ router.delete('/:id', async (req, res) => {
 });
 
 /**
- * $route get staff/:id
+ * @route get v0/staff/:id
  * @desc find one staff by id
  * @param id {string}
  * @return staff {Object}
@@ -118,7 +118,7 @@ router.get('/:id', async (req, res) => {
 });
 
 /**
- * $route get staff/:name
+ * @route get v0/staff/:name
  * @desc find one staff by name
  * @query staff's name {String}
  * @return staffs {Array}
@@ -150,7 +150,7 @@ router.get('/', async (req, res) => {
 });
 
 /**
- * $route put staff/:id
+ * @route put v0/staff/:id
  * @desc update one staff by id
  * @param id {String}
  * @return staff {Object}
